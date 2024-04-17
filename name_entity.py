@@ -1,19 +1,4 @@
-[11:08 am, 17/4/2024] Nandana Duk: import streamlit as st
-from googletrans import Translator
-
-st.header('Machine Translation Demo')
-input_text = st.text_area("Please enter the text", value='')
-option = st.selectbox(
-    'To which language do you wish to translate this text to?',
-    ('Malayalam', 'Hindi', 'Tamil')
-)
-
-if st.button('Translate'):
-    translator = Translator()
-    translation = translator.translate(input_text, dest=option.lower())
-    st.write(translation.text)
-[11:13 am, 17/4/2024] Nandana Duk: pip install googletrans==4.0.0-rc1
-[12:17 pm, 17/4/2024] Nandana Duk: import streamlit as st
+import streamlit as st
 import spacy
 import en_core_web_sm
 from newspaper import Article
